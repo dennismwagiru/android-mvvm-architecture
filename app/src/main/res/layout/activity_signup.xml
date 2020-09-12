@@ -63,7 +63,7 @@
 
                 <EditText
                         android:id="@+id/edit_text_name"
-                        android:hint="Belal Khan"
+                        android:hint="Dennis Mwagiru"
                         android:inputType="text"
                         android:drawablePadding="16dp"
                         android:drawableLeft="@drawable/ic_name"
@@ -75,7 +75,7 @@
 
                 <EditText
                         android:id="@+id/edit_text_email"
-                        android:hint="belal@gmail.com"
+                        android:hint="dennismwagiru@gmail.com"
                         android:inputType="textEmailAddress"
                         android:drawablePadding="16dp"
                         android:drawableLeft="@drawable/ic_email"
