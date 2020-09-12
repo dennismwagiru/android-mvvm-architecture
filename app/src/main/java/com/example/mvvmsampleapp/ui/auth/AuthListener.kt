@@ -1,5 +1,7 @@
 package com.example.mvvmsampleapp.ui.auth
 
+import androidx.lifecycle.LiveData
+
 /**
  * Created by Dennis Joel on 9/12/2020.
  */
@@ -7,7 +9,7 @@ package com.example.mvvmsampleapp.ui.auth
 interface AuthListener {
     fun onStarted()
 
-    fun onSuccess()
+    fun onSuccess(loginResponse: LiveData<String>)
 
     fun onFailure(message: String)
 }

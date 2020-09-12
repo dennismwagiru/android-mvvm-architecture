@@ -2,6 +2,7 @@ package com.example.mvvmsampleapp.ui.auth
 
 import android.view.View
 import androidx.lifecycle.ViewModel
+import com.example.mvvmsampleapp.data.repositories.UserRepository
 
 /**
  * Created by Dennis Joel on 9/12/2020.
@@ -21,6 +22,8 @@ class AuthViewModel : ViewModel() {
 
             return
         }
-        authListener?.onSuccess()
+
+        val loginResponse = UserRepository().userLogin(email!!, password!!)
+        authListener?.onSuccess(loginResponse)
     }
 }
