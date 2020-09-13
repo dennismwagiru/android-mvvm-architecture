@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.mvvmsampleapp.data.repositories.UserRepository
 import com.example.mvvmsampleapp.util.ApiException
 import com.example.mvvmsampleapp.util.Coroutines
+import com.example.mvvmsampleapp.util.NoInternetException
 
 /**
  * Created by Dennis Joel on 9/12/2020.
@@ -39,6 +40,8 @@ class AuthViewModel(
                 }
                 authListener?.onFailure(authResponse.message!!)
             } catch (e: ApiException) {
+                authListener?.onFailure(e.message!!)
+            } catch (e: NoInternetException) {
                 authListener?.onFailure(e.message!!)
             }
         }
